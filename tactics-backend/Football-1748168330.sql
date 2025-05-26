@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS "player" (
 	"num_row" serial NOT NULL,
 	"id_field" bigint NOT NULL,
 	"coordinates" point NOT NULL,
-	"color" varchar(7) NOT NULL,
+	"color" varchar(22) NOT NULL,
 	PRIMARY KEY ("num_row")
 );
 
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS "ball" (
 	"num_row" serial NOT NULL,
 	"id_field" bigint NOT NULL,
 	"coordinates" point NOT NULL,
-	"color" varchar(7) NOT NULL,
+	"color" varchar(22) NOT NULL,
 	PRIMARY KEY ("num_row")
 );
 
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS "cone" (
 	"num_row" serial NOT NULL,
 	"id_field" bigint NOT NULL,
 	"coordinates" point NOT NULL,
-	"color" varchar(7) NOT NULL,
+	"color" varchar(22) NOT NULL,
 	PRIMARY KEY ("num_row")
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS "line" (
 	"id_field" bigint NOT NULL,
 	"coordinates_start" point NOT NULL,
 	"coordinates_end" point NOT NULL,
-	"color" varchar(7) NOT NULL,
+	"color" varchar(22) NOT NULL,
 	"type_line" varchar(10) NOT NULL,
 	PRIMARY KEY ("num_row")
 );
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS "number" (
 	"num_row" serial NOT NULL,
 	"coordinates" point NOT NULL,
 	"id_field" bigint NOT NULL,
-	"color" varchar(7) NOT NULL,
+	"color" varchar(22) NOT NULL,
 	"number" smallint NOT NULL,
 	PRIMARY KEY ("num_row")
 );
