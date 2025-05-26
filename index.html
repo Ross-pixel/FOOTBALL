@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taktinen taulu</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- dom-to-image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  </head>
+  <body>
+    <h1>Taktinen taulu</h1>
+
+    <!--  поле с объяснением функционала -->
+    <div id="instructions">
+      Tässä taulussa voit sijoittaa pelaajia, palloja ja kartioita sekä piirtää
+      viivoja. Valitse haluamasi väri ja numerointi, tyhjennä kenttä tai
+      tallenna piirroksesi PDF-tiedostona.
+    </div>
+    <div id="field-info">
+      <label for="field-list">Valitse kenttä:</label>
+      <select id="field-list" onchange="selectFieldFromList()"></select>
+
+      <label for="field-id">Kentän ID:</label>
+      <input
+        type="number"
+        id="field-id"
+        value="1"
+        min="1"
+        style="width: 60px"
+      />
+
+      <label for="field-name">Kentän nimi:</label>
+      <input type="text" id="field-name" placeholder="Syötä kentän nimi" />
+
+      <label for="field-description">Kuvaus:</label>
+      <input
+        type="text"
+        id="field-description"
+        placeholder="Syötä kentän kuvaus"
+      />
+
+      <div style="margin-top: 10px">
+        <button onclick="saveToDatabase()">💾 Tallenna kenttä</button>
+        <button onclick="loadFromDatabase()">📥 Lataa kenttä</button>
+        <button onclick="newField()">➕ Uusi kenttä</button>
+      </div>
+    </div>
+
+    <div id="toolbar">
+      <div id="elements">
+        <div id="color-palette">
+          <!-- 6 цвета, вместо красного — maroon -->
+          <button class="color-btn" data-color="#00FF00"></button>
+          <button class="color-btn" data-color="#0000FF"></button>
+          <button class="color-btn" data-color="#FFFF00"></button>
+          <button class="color-btn" data-color="#FF00FF"></button>
+          <button class="color-btn" data-color="#00FFFF"></button>
+          <button class="color-btn" data-color="#800000"></button>
+        </div>
+        <button class="tool-btn" data-action="player">Pelaaja</button>
+        <button class="tool-btn" data-action="ball">Pallo</button>
+        <button class="tool-btn" data-action="cone">Kartio</button>
+        <button class="tool-btn" data-action="line">Viiva</button>
+        <select id="line-type">
+          <option value="straight">Suora</option>
+          <option value="dashed">Pisteviiva</option>
+          <option value="zigzag">Aaltoviiva</option>
+        </select>
+        <select id="number-picker">
+          <option value="">Numero</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div id="actions">
+        <button id="clear-tool">Työkalun nollaus</button>
+        <button id="delete-selected">Poista valittu</button>
+        <button id="delete-all">Tyhjennä kaikki</button>
+      </div>
+    </div>
+
+    <div id="field">
+      <svg id="svg-field" width="800" height="500">
+        <defs>
+          <marker
+            id="arrowhead"
+            markerWidth="10"
+            markerHeight="7"
+            refX="0"
+            refY="3.5"
+            orient="auto"
+          >
+            <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+          </marker>
+        </defs>
+        <rect width="800" height="500" fill="green" />
+      </svg>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
