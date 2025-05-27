@@ -61,8 +61,8 @@ PGDATABASE=tactics
 3. Create schema `football`
 4. Import the SQL file:
 
-   - `Football-1748168330.sql`
-
+   - [Football-1748168330.sql](https://github.com/Ross-pixel/FOOTBALL/blob/main/Football-1748168330.sql)
+```
 ### 5. Run Backend Server
 
 ```bash
@@ -151,7 +151,7 @@ PGDATABASE=tactics
 3. Luo skeema `football`
 4. Tuo SQL-tiedosto:
 
-   - `Football-1748168330.sql`
+   - [Football-1748168330.sql](https://github.com/Ross-pixel/FOOTBALL/blob/main/Football-1748168330.sql)
 
 ### 5. Käynnistä backend
 
@@ -232,7 +232,8 @@ PGDATABASE=tactics
 1. Создай БД `tactics`
 2. Открой `pgAdmin`
 3. Создай схему `football`
-4. Импортируй `Football-1748168330.sql`
+4. Импортируй:
+   - [Football-1748168330.sql](https://github.com/Ross-pixel/FOOTBALL/blob/main/Football-1748168330.sql)
 
 ### 5. Запусти сервер
 
