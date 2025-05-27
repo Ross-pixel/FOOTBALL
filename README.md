@@ -15,6 +15,8 @@ This web application allows users to:
 - Move, delete, and highlight objects
 - Create different line types (straight, dashed, zigzag)
 
+---
+
 ## ⚡ Requirements
 
 - Node.js (>= 16)
