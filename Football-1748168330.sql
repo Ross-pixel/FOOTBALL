@@ -1,4 +1,4 @@
-set search_path to tactics; /* поменяй на свою */
+set search_path to football; /* поменяй на свою */
 
 CREATE TABLE IF NOT EXISTS "field" (
 	"id" serial NOT NULL,
