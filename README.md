@@ -10,20 +10,18 @@ GitHub Repository: [https://github.com/Ross-pixel/FOOTBALL](https://github.com/R
 
 This web application allows users to:
 
-* Draw and manage objects on a football field (players, ball, cones, lines, numbers)
-* Save and load fields from a PostgreSQL database
-* Move, delete, and highlight objects
-* Create different line types (straight, dashed, zigzag)
-*
-
----
+- Draw and manage objects on a football field (players, ball, cones, lines, numbers)
+- Save and load fields from a PostgreSQL database
+- Move, delete, and highlight objects
+- Create different line types (straight, dashed, zigzag)
+- ***
 
 ## ⚡ Requirements
 
-* Node.js (>= 16)
-* PostgreSQL (version >= 12 recommended)
-* pgAdmin (optional, for DB UI)
-* Browser (Chrome or Firefox recommended)
+- Node.js (>= 16)
+- PostgreSQL (version >= 12 recommended)
+- pgAdmin (optional, for DB UI)
+- Browser (Chrome or Firefox recommended)
 
 ---
 
@@ -48,11 +46,11 @@ npm install
 Create a `.env` file inside `tactics-backend`:
 
 ```
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=tactics
+PGUSER=your_username
+PGPASSWORD=your_password
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=tactics
 ```
 
 ### 4. Setup PostgreSQL Database
@@ -62,7 +60,7 @@ DB_DATABASE=tactics
 3. Create schema `football`
 4. Import the SQL file:
 
-   * `Football-1748168330.sql`
+   - `Football-1748168330.sql`
 
 ### 5. Run Backend Server
 
@@ -82,12 +80,12 @@ Simply open `index.html` in your browser (double-click or serve via Live Server)
 
 All tables reside in schema `football`:
 
-* `field` (id, name, description)
-* `player` (id\_field, coordinates, color)
-* `ball` (id\_field, coordinates)
-* `cone` (id\_field, coordinates, color)
-* `line` (id\_field, coordinates\_start, coordinates\_end, color, type\_line)
-* `number` (id\_field, coordinates, color, number)
+- `field` (id, name, description)
+- `player` (id_field, coordinates, color)
+- `ball` (id_field, coordinates)
+- `cone` (id_field, coordinates, color)
+- `line` (id_field, coordinates_start, coordinates_end, color, type_line)
+- `number` (id_field, coordinates, color, number)
 
 Each field saves all related elements (1\:n relation).
 
@@ -103,19 +101,19 @@ Verkkopohjainen SVG-editori jalkapallotaktiikoiden piirtämiseen. Frontend: HTML
 
 Sovelluksella voi:
 
-* Piirtää ja hallita kohteita kentällä (pelaajat, pallo, kartiot, viivat, numerot)
-* Tallentaa ja ladata kenttiä tietokannasta
-* Siirtää, poistaa ja valita objekteja
-* Piirtää suoria, katkoviivoja ja siksak-viivoja
+- Piirtää ja hallita kohteita kentällä (pelaajat, pallo, kartiot, viivat, numerot)
+- Tallentaa ja ladata kenttiä tietokannasta
+- Siirtää, poistaa ja valita objekteja
+- Piirtää suoria, katkoviivoja ja siksak-viivoja
 
 ---
 
 ## ⚡ Vaatimukset
 
-* Node.js (vähintään 16)
-* PostgreSQL (suositus vähintään 12)
-* pgAdmin (valinnainen)
-* Selain (Chrome tai Firefox)
+- Node.js (vähintään 16)
+- PostgreSQL (suositus vähintään 12)
+- pgAdmin (valinnainen)
+- Selain (Chrome tai Firefox)
 
 ---
 
@@ -138,11 +136,11 @@ npm install
 ### 3. Luo .env-tiedosto
 
 ```
-DB_USER=oma_kayttaja
-DB_PASSWORD=salasana
-DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=tactics
+PGUSER=oma_kayttaja
+PGPASSWORD=salasana
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=tactics
 ```
 
 ### 4. Tietokannan perustaminen
@@ -152,7 +150,7 @@ DB_DATABASE=tactics
 3. Luo skeema `football`
 4. Tuo SQL-tiedosto:
 
-   * `Football-1748168330.sql`
+   - `Football-1748168330.sql`
 
 ### 5. Käynnistä backend
 
@@ -172,7 +170,7 @@ Avaa `index.html` selaimessa
 
 Kaikki taulut sijaitsevat skeemassa `football`:
 
-* `field`, `player`, `ball`, `cone`, `line`, `number`
+- `field`, `player`, `ball`, `cone`, `line`, `number`
 
 ---
 
@@ -186,19 +184,19 @@ SVG-редактор для создания тактических схем н�
 
 Позволяет:
 
-* Рисовать игроков, мяч, конусы, линии и цифры
-* Сохранять и загружать поля из базы данных
-* Перемещать, удалять и выделять объекты
-* Создавать разные типы линий (прямые, пунктирные, зигзаги)
+- Рисовать игроков, мяч, конусы, линии и цифры
+- Сохранять и загружать поля из базы данных
+- Перемещать, удалять и выделять объекты
+- Создавать разные типы линий (прямые, пунктирные, зигзаги)
 
 ---
 
 ## ⚡ Требования
 
-* Node.js (не ниже 16)
-* PostgreSQL (12 и выше)
-* pgAdmin (опционально)
-* Браузер (рекомендуется Chrome или Firefox)
+- Node.js (не ниже 16)
+- PostgreSQL (12 и выше)
+- pgAdmin (опционально)
+- Браузер (рекомендуется Chrome или Firefox)
 
 ---
 
@@ -221,11 +219,11 @@ npm install
 ### 3. Создай файл `.env`
 
 ```
-DB_USER=твой_логин
-DB_PASSWORD=твой_пароль
-DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=tactics
+PGUSER=твой_логин
+PGPASSWORD=твой_пароль
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=tactics
 ```
 
 ### 4. Подключи базу данных
@@ -253,7 +251,7 @@ npm start
 
 Схема: `football`
 
-* `field`, `player`, `ball`, `cone`, `line`, `number`
+- `field`, `player`, `ball`, `cone`, `line`, `number`
 
 ---
 
