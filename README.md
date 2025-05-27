@@ -14,7 +14,6 @@ This web application allows users to:
 - Save and load fields from a PostgreSQL database
 - Move, delete, and highlight objects
 - Create different line types (straight, dashed, zigzag)
-- ***
 
 ## ⚡ Requirements
 
